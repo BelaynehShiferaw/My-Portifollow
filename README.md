@@ -1,6 +1,6 @@
 # My-Portifollow
 
-Full-stack developer portfolio website.
+Full-stack developer website portfolio.
 
 ## Admin login
 
