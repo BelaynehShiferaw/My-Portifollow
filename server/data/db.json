@@ -1,0 +1,283 @@
+{
+  "profile": {
+    "name": "Belayneh Shiferaw",
+    "role": "Computer Science Student & Full-Stack Engineer",
+    "tagline": "Building high-performance web systems, algorithmic solutions, and robust network infrastructure with clean architecture.",
+    "bio": "I am a Computer Science student at Bahir Dar University and a passionate Full-Stack Software Developer. I am studying about  web applications, algorithms & data structures, database engine design, Cisco network infrastructure, and intelligent software systems.",
+    "location": "Bahir Dar, Ethiopia",
+    "phone": "0930584008",
+    "email": "belexshiferaw@gmail.com",
+    "telegram": "https://t.me/Tele_ale12",
+    "github": "https://github.com/BelaynehShiferaw",
+    "linkedin": "https://www.linkedin.com/in/belayneh-shiferaw-1b9389387/",
+    "avatarUrl": "/belayneh.jpg",
+    "resumeUrl": "/resume.pdf",
+    "status": "Available for Software Engineering & Full-Stack Projects"
+  },
+  "projects": [
+    {
+      "id": "proj-1790925742844",
+      "title": "HOTEL  MANAGEMENT NEWORK.PKT",
+      "category": "Network Design",
+      "description": "I am develop hotel managment network design",
+      "tags": [
+        "cisco packet tracer"
+      ],
+      "githubUrl": "#",
+      "liveUrl": "C:\\Users\\Belayneh\\Documents/HOTEL  MANAGEMENT NEWORK.PKT",
+      "imageUrl": "C:\\Users\\Belayneh\\Documents/HOTEL  MANAGEMENT NEWORK.PKT",
+      "featured": true,
+      "year": "2026",
+      "imageAsset": null,
+      "attachment": {
+        "id": "774a53fb-d536-4551-af54-88ae435421c0",
+        "name": "HOTEL  MANAGEMENT NEWORK.PKT.pkt",
+        "type": "",
+        "size": 67730
+      }
+    },
+    {
+      "id": "proj-1",
+      "title": "Smart Agricultural IoT & Web Automation Platform",
+      "category": "IoT & Full Stack",
+      "description": "Engineered an automated agriculture platform combining ESP32 microcontrollers, real-time soil moisture sensors, MQTT protocols, and an interactive React analytics dashboard.",
+      "tags": [
+        "ESP32",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "MQTT"
+      ],
+      "githubUrl": "https://github.com/BelaynehShiferaw/smart-irrigation-iot",
+      "liveUrl": "#",
+      "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop",
+      "featured": true,
+      "year": "2024"
+    },
+    {
+      "id": "proj-2",
+      "title": "Enterprise Cisco Campus Network Infrastructure",
+      "category": "Network Design",
+      "description": "Designed high-availability campus network topology featuring VLAN segmentation, inter-VLAN routing, OSPF dynamic routing protocols, and ACL security policies using Cisco Packet Tracer.",
+      "tags": [
+        "Cisco Packet Tracer",
+        "VLAN",
+        "OSPF",
+        "Routing & Switching",
+        "CCNA"
+      ],
+      "githubUrl": "https://github.com/BelaynehShiferaw/cisco-campus-network",
+      "liveUrl": "#",
+      "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1000&auto=format&fit=crop",
+      "featured": true,
+      "year": "2024"
+    },
+    {
+      "id": "proj-4",
+      "title": "EthioSearch Amharic Natural Language Processing Engine",
+      "category": "Python & CS Algorithms",
+      "description": "Bilingual English-Amharic search engine utilizing Natural Language Processing (NLP), TF-IDF text ranking algorithms, tokenization, and a modern web query interface.",
+      "tags": [
+        "Python",
+        "NLP",
+        "Flask",
+        "Data Structures",
+        "React"
+      ],
+      "githubUrl": "https://github.com/BelaynehShiferaw/ethio-search-engine",
+      "liveUrl": "#",
+      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop",
+      "featured": false,
+      "year": "2024"
+    },
+    {
+      "id": "proj-5",
+      "title": "Full-Stack Enterprise Service & Admin Portal",
+      "category": "Web Development",
+      "description": "Enterprise-grade web application featuring JWT authentication, role-based access control, analytics charts, dynamic product catalog, and invoice generator.",
+      "tags": [
+        "React",
+        "Express",
+        "MongoDB",
+        "Node.js",
+        "Tailwind CSS"
+      ],
+      "githubUrl": "https://github.com/BelaynehShiferaw/fullstack-admin-portal",
+      "liveUrl": "#",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
+      "featured": true,
+      "year": "2023"
+    }
+  ],
+  "skills": [
+    {
+      "id": "sk-1",
+      "name": "Data Structures & Algorithms",
+      "category": "Computer Science Core",
+      "proficiency": 92,
+      "icon": "Terminal"
+    },
+    {
+      "id": "sk-2",
+      "name": "JavaScript (ES6+) & TypeScript",
+      "category": "Software Engineering",
+      "proficiency": 90,
+      "icon": "Code2"
+    },
+    {
+      "id": "sk-3",
+      "name": "React.js & Frontend Systems",
+      "category": "Software Engineering",
+      "proficiency": 88,
+      "icon": "Atom"
+    },
+    {
+      "id": "sk-4",
+      "name": "Node.js & Express REST APIs",
+      "category": "Software Engineering",
+      "proficiency": 86,
+      "icon": "Server"
+    },
+    {
+      "id": "sk-5",
+      "name": "Python & Artificial Intelligence",
+      "category": "Computer Science Core",
+      "proficiency": 82,
+      "icon": "Terminal"
+    },
+    {
+      "id": "sk-6",
+      "name": "C++ & Object-Oriented Programming",
+      "category": "Computer Science Core",
+      "proficiency": 80,
+      "icon": "Cpu"
+    },
+    {
+      "id": "sk-7",
+      "name": "MySQL & Stored Procedures",
+      "category": "Database Systems",
+      "proficiency": 88,
+      "icon": "Database"
+    },
+    {
+      "id": "sk-8",
+      "name": "MongoDB & NoSQL Architecture",
+      "category": "Database Systems",
+      "proficiency": 84,
+      "icon": "HardDrive"
+    },
+    {
+      "id": "sk-9",
+      "name": "Cisco Router & Switch Configuration",
+      "category": "Computer Networks",
+      "proficiency": 88,
+      "icon": "Network"
+    },
+    {
+      "id": "sk-10",
+      "name": "VLANs, OSPF & CCNA Network Security",
+      "category": "Computer Networks",
+      "proficiency": 85,
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "sk-11",
+      "name": "ESP32 & IoT Embedded Systems",
+      "category": "Hardware & IoT",
+      "proficiency": 82,
+      "icon": "Zap"
+    },
+    {
+      "id": "sk-12",
+      "name": "Git & GitHub Workflows",
+      "category": "Software Engineering",
+      "proficiency": 92,
+      "icon": "GitBranch"
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "BSc in Computer Science Student",
+      "company": "Bahir Dar University",
+      "period": "2023 - Present",
+      "description": "Pursuing degree in Computer Science covering Data Structures, Algorithms, Software Engineering, Database Systems, Computer Networks, and AI.",
+      "icon": "GraduationCap"
+    },
+    {
+      "id": "exp-2",
+      "role": "Full-Stack Software Engineer",
+      "company": "Projects & Freelance",
+      "period": "2023 - Present",
+      "description": "Developing modern web applications, scalable backend APIs, relational & NoSQL databases, and interactive administrative portals.",
+      "icon": "Code"
+    },
+    {
+      "id": "exp-3",
+      "role": "Network Designer & Systems Specialist",
+      "company": "Regional IT Infrastructure",
+      "period": "2024 - Present",
+      "description": "Designing local area networks, configuring Cisco switches/routers, implementing VLAN segmentation, and troubleshooting network infrastructure.",
+      "icon": "Network"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-1",
+      "title": "Full-Stack Web Engineering",
+      "description": "Custom high-performance web applications built with React, Node.js, Express, and MongoDB/MySQL. Built with modular architecture and clean code.",
+      "icon": "Globe"
+    },
+    {
+      "id": "srv-2",
+      "title": "Cisco Network Architecture",
+      "description": "Designing and configuring enterprise campus networks, Cisco routers/switches, VLANs, subnetting, inter-VLAN routing, and network security policies.",
+      "icon": "Network"
+    },
+    {
+      "id": "srv-3",
+      "title": "Database Engine Design",
+      "description": "Designing normalized MySQL relational schemas with custom stored procedures, transactional triggers, indexing, as well as MongoDB collections.",
+      "icon": "Database"
+    },
+    {
+      "id": "srv-4",
+      "title": "Custom Admin & Control Dashboards",
+      "description": "Secure, real-time management panels equipped with analytics charts, data tables, CRUD operations, user role management, and export capabilities.",
+      "icon": "LayoutDashboard"
+    },
+    {
+      "id": "srv-5",
+      "title": "IoT & Hardware System Integration",
+      "description": "Embedded ESP32 microcontrollers integrated with web REST APIs and real-time sensor monitoring dashboards for agriculture and smart hardware.",
+      "icon": "Cpu"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "blog-1",
+      "title": "Computer Science Principles in Building High-Throughput Web Apps",
+      "excerpt": "How algorithm selection, space-time complexity, and efficient database indexing optimize modern full-stack web applications.",
+      "date": "Aug 20, 2024",
+      "readTime": "6 min read",
+      "category": "Computer Science"
+    },
+    {
+      "id": "blog-2",
+      "title": "Designing Resilient Campus Networks with Cisco Routers & VLANs",
+      "excerpt": "Technical breakdown of building segmented, secure network architecture using Cisco Packet Tracer, dynamic OSPF routing, and Access Control Lists.",
+      "date": "Aug 10, 2024",
+      "readTime": "7 min read",
+      "category": "Computer Networks"
+    },
+    {
+      "id": "blog-3",
+      "title": "Building Smart Agricultural IoT Platforms with ESP32 & React",
+      "excerpt": "How I combined low-cost microcontrollers, soil moisture sensors, Node.js REST endpoints, and a React frontend for automated irrigation.",
+      "date": "Jul 28, 2024",
+      "readTime": "5 min read",
+      "category": "IoT & Hardware"
+    }
+  ],
+  "messages": []
+}
