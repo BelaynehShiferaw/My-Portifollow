@@ -76,7 +76,17 @@ const mergeProjects = (...projectLists) => {
 };
 
 export default function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(() => {
+    let savedTheme = 'light';
+    try {
+      savedTheme = window.localStorage.getItem('portfolio-theme') || 'light';
+    } catch (err) {
+      console.warn('Unable to read saved theme preference:', err);
+    }
+    const initialTheme = savedTheme === 'dark' ? 'dark' : 'light';
+    document.documentElement.classList.toggle('light-theme', initialTheme === 'light');
+    return initialTheme;
+  });
   const [currentView, setCurrentView] = useState(() => (
     window.location.pathname.replace(/\/+$/, '').toLowerCase() === '/admin' ||
     new URLSearchParams(window.location.search).has('resetToken')
@@ -184,10 +194,11 @@ export default function App() {
   const toggleTheme = () => {
     const nextTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(nextTheme);
-    if (nextTheme === 'light') {
-      document.documentElement.classList.add('light-theme');
-    } else {
-      document.documentElement.classList.remove('light-theme');
+    document.documentElement.classList.toggle('light-theme', nextTheme === 'light');
+    try {
+      window.localStorage.setItem('portfolio-theme', nextTheme);
+    } catch (err) {
+      console.warn('Unable to save theme preference:', err);
     }
   };
 
