@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-backend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server/index.js",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.4",
+    "mongodb": "^7.7.0",
+    "nodemailer": "^10.0.13"
+  }
+}

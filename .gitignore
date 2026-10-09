@@ -5,5 +5,6 @@ vite.config.js.timestamp-*.mjs
 .env
 .env.*
 !.env.example
-server/data/local-db.json
-server/data/uploads/certificates/
+backend/server/data/local-db.json
+backend/server/data/uploads/certificates/
+backend/server/data/uploads/cv.pdf
