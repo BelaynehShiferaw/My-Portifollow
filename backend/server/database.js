@@ -141,7 +141,7 @@ export async function writeDB(nextState) {
       ? persistState(snapshot)
       : persistLocalState(snapshot)
   ));
-  writeQueue = operation.catch(() => {});
+  writeQueue = operation.catch(() => { });
 
   try {
     await operation;

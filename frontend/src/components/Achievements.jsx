@@ -38,21 +38,21 @@ export default function Achievements({ certificates = [], eager = false }) {
       category: 'Computer Networks',
       description: 'Engineered segmented campus network featuring VLANs, inter-VLAN routing, OSPF dynamic routing, and ACL security policies using Cisco Packet Tracer.',
       badge: 'Network Architecture Design',
-      date: '2024'
+      date: '2026'
     },
     {
       title: 'Smart Agricultural IoT System Platform',
       category: 'Hardware & IoT',
       description: 'Integrated ESP32 microcontrollers, moisture sensors, Node.js REST endpoints, and a React real-time telemetry dashboard for automated irrigation.',
       badge: 'Hardware Innovation',
-      date: '2024'
+      date: '2026'
     },
     {
       title: 'Computer Science Academic Excellence',
       category: 'Academia',
       description: 'Consistently achieved high academic standing in Data Structures, Algorithms, and Software Engineering at Bahir Dar University.',
       badge: 'Academic Honor',
-      date: '2023 - Present'
+      date: '2024 - Present'
     }
   ];
 
@@ -62,7 +62,7 @@ export default function Achievements({ certificates = [], eager = false }) {
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
         <h1 className="text-4xl sm:text-6xl font-extrabold font-heading text-slate-100">
-          Key Achievements & <span className="text-amber-400">Certifications</span>
+        Key Achievements & Certifications
         </h1>
         <p className="text-slate-400 text-base sm:text-lg">
           Highlights of major technical milestones, network designs, IoT hardware innovations, and software achievements.
@@ -96,6 +96,7 @@ export default function Achievements({ certificates = [], eager = false }) {
           </div>
         )}
       </section>
+
 
       {/* Achievements Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -161,8 +162,10 @@ function CertificateCard({ certificate, fileUrl, eager }) {
           >
             View certificate <ExternalLink className="w-4 h-4" />
           </a>
+          
         )}
       </div>
     </article>
   );
+
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   Lock, LayoutDashboard, FolderGit2, Cpu, Inbox, Settings, Award,
   Plus, Trash2, Edit3, CheckCircle, XCircle, Eye, EyeOff, LogOut, 
-  Sparkles, Save, ShieldCheck, Mail, Phone, ExternalLink, Upload, FileText 
+  Sparkles, Save, ShieldCheck, Mail, Phone, ExternalLink, Upload, FileText, Calendar 
 } from 'lucide-react';
 import { deleteProjectFile, saveProjectFile } from '../projectFiles';
 import {
@@ -25,11 +25,19 @@ export default function AdminDashboard({ profile, projects, skills, certificates
   const [credentialsForm, setCredentialsForm] = useState({ currentUsername: '', currentPassword: '', newUsername: '', newPassword: '' });
   const [activeTab, setActiveTab] = useState('overview');
 
+  const getTodayDateString = () => {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    return `${yyyy}-${mm}-${dd}`;
+  };
+
   // Modals state
   const [projectModalOpen, setProjectModalOpen] = useState(false);
   const [editingProject, setEditingProject] = useState(null);
   const [projectForm, setProjectForm] = useState({
-    title: '', category: 'Web Development', description: '', tags: '', githubUrl: '', liveUrl: '', imageUrl: '', featured: false, year: '2024'
+    title: '', category: 'Web Development', description: '', tags: '', githubUrl: '', liveUrl: '', imageUrl: '', featured: false, year: getTodayDateString()
   });
   const [projectImageFile, setProjectImageFile] = useState(null);
   const [projectAttachmentFile, setProjectAttachmentFile] = useState(null);
@@ -147,6 +155,10 @@ export default function AdminDashboard({ profile, projects, skills, certificates
     setProjectAttachmentFile(null);
     if (proj) {
       setEditingProject(proj);
+      let formattedYear = proj.year || getTodayDateString();
+      if (/^\d{4}$/.test(formattedYear)) {
+        formattedYear = `${formattedYear}-01-01`;
+      }
       setProjectForm({
         title: proj.title,
         category: proj.category,
@@ -156,12 +168,12 @@ export default function AdminDashboard({ profile, projects, skills, certificates
         liveUrl: proj.liveUrl,
         imageUrl: proj.imageUrl,
         featured: proj.featured,
-        year: proj.year || '2024'
+        year: formattedYear
       });
     } else {
       setEditingProject(null);
       setProjectForm({
-        title: '', category: 'Web Development', description: '', tags: '', githubUrl: '', liveUrl: '', imageUrl: '', featured: false, year: '2024'
+        title: '', category: 'Web Development', description: '', tags: '', githubUrl: '', liveUrl: '', imageUrl: '', featured: false, year: getTodayDateString()
       });
     }
     setProjectModalOpen(true);
@@ -768,7 +780,10 @@ export default function AdminDashboard({ profile, projects, skills, certificates
                     <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">
                       {proj.category}
                     </span>
-                    <span className="text-xs text-slate-400">{proj.year}</span>
+                    <span className="text-xs text-slate-400 flex items-center gap-1.5 bg-slate-900/80 px-2 py-0.5 rounded border border-slate-800">
+                      <Calendar className="w-3 h-3 text-emerald-400" />
+                      {proj.year}
+                    </span>
                   </div>
 
                   <h3 className="text-lg font-bold font-heading text-slate-100">{proj.title}</h3>
@@ -1239,12 +1254,24 @@ export default function AdminDashboard({ profile, projects, skills, certificates
                 </div>
 
                 <div className="space-y-1">
-                  <label className="font-semibold text-slate-300">Year</label>
+                  <div className="flex items-center justify-between">
+                    <label className="font-semibold text-slate-300 flex items-center gap-1.5">
+                      <Calendar className="w-4 h-4 text-emerald-400" />
+                      Date / Year
+                    </label>
+                    <button
+                      type="button"
+                      onClick={() => setProjectForm(prev => ({ ...prev, year: getTodayDateString() }))}
+                      className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors underline cursor-pointer"
+                    >
+                      Set Today
+                    </button>
+                  </div>
                   <input
-                    type="text"
+                    type="date"
                     value={projectForm.year}
                     onChange={(e) => setProjectForm({ ...projectForm, year: e.target.value })}
-                    className="w-full px-3 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-100"
+                    className="w-full px-3 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-100 cursor-pointer dark:[color-scheme:dark]"
                   />
                 </div>
               </div>

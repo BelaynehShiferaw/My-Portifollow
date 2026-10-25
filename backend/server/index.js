@@ -298,7 +298,7 @@ const server = http.createServer((req, res) => {
           imageAsset: data.imageAsset || null,
           attachment: data.attachment || null,
           featured: Boolean(data.featured),
-          year: data.year || new Date().getFullYear().toString()
+          year: data.year || new Date().toISOString().split('T')[0]
         };
         db.projects.unshift(newProject);
         if (!(await writeDB(db))) return sendJSON(res, 500, { success: false, message: 'Unable to save project.' });

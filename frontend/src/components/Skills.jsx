@@ -48,8 +48,7 @@ export default function Skills({ skills }) {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <h2 className="text-4xl sm:text-6xl font-extrabold font-heading">
-            Skills & <br />
-            <span className="gradient-text-emerald">Technology Stack</span>
+            Skills & Technology Stack
           </h2>
 
           <p className="text-slate-400 text-base sm:text-lg">

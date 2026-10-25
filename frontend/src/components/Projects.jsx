@@ -194,8 +194,7 @@ export default function Projects({ projects }) {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
           <h2 className="text-4xl sm:text-6xl font-extrabold font-heading">
-            Recent Work & <br />
-            <span className="gradient-text-emerald">Engineering Projects</span>
+            Recent Work & Projects 
           </h2>
 
           <p className="text-slate-400 text-base sm:text-lg">
@@ -255,10 +254,16 @@ export default function Projects({ projects }) {
               {/* Card Content */}
               <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                 <div className="space-y-2">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between gap-2">
                     <h3 className="text-xl font-bold font-heading text-slate-100 group-hover:text-emerald-400 transition-colors">
                       {project.title}
                     </h3>
+                    {project.year && (
+                      <span className="text-xs text-slate-400 flex items-center gap-1 shrink-0 bg-slate-900/80 border border-slate-800 px-2 py-0.5 rounded-md">
+                        <Calendar className="w-3 h-3 text-emerald-400" />
+                        {project.year}
+                      </span>
+                    )}
                   </div>
 
                   <p className="text-slate-400 text-xs sm:text-sm line-clamp-3 leading-relaxed">
