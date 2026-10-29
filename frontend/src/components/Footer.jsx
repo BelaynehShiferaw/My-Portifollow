@@ -1,8 +1,30 @@
 import React from 'react';
 import { Terminal, Github, Linkedin, Send, Mail, Phone, Heart, GraduationCap } from 'lucide-react';
 
-export default function Footer({ profile }) {
+export default function Footer({ profile, activeSection = 'home', setActiveSection, setCurrentView }) {
   const githubUrl = profile.github || "https://github.com/BelaynehShiferaw";
+
+  const navLinks = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About Me' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'education', label: 'Education' },
+    { id: 'achievements', label: 'Achievements' },
+    { id: 'contact', label: 'Contact Me' },
+  ];
+
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    if (setCurrentView) {
+      setCurrentView('public');
+    }
+    if (setActiveSection) {
+      setActiveSection(sectionId);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <footer className="portfolio-footer bg-slate-950 border-t border-slate-900 py-12 px-4 sm:px-6 lg:px-8 text-slate-400">
@@ -10,13 +32,19 @@ export default function Footer({ profile }) {
         
         {/* Brand Info */}
         <div className="space-y-4 md:col-span-2">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 p-0.5">
+          <div 
+            onClick={(e) => handleNavClick(e, 'home')}
+            className="flex items-center gap-3 cursor-pointer group w-fit"
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => { if (e.key === 'Enter') handleNavClick(e, 'home'); }}
+          >
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 p-0.5 group-hover:scale-105 transition-transform">
               <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
                 <Terminal className="w-4 h-4 text-emerald-400" />
               </div>
             </div>
-            <span className="text-xl font-bold font-heading text-slate-100">
+            <span className="text-xl font-bold font-heading text-slate-100 group-hover:text-emerald-300 transition-colors">
               {profile.name || 'Belayneh Shiferaw'}
             </span>
           </div>
@@ -42,11 +70,21 @@ export default function Footer({ profile }) {
         <div className="space-y-3">
           <h4 className="text-sm font-bold text-slate-200 font-heading">Navigation</h4>
           <ul className="space-y-2 text-xs">
-            <li><a href="#home" className="hover:text-emerald-400 transition-colors">Home</a></li>
-            <li><a href="#about" className="hover:text-emerald-400 transition-colors">About Me</a></li>
-            <li><a href="#projects" className="hover:text-emerald-400 transition-colors">Projects</a></li>
-            <li><a href="#skills" className="hover:text-emerald-400 transition-colors">Skills</a></li>
-            <li><a href="#contact" className="hover:text-emerald-400 transition-colors">Contact Me</a></li>
+            {navLinks.map((link) => (
+              <li key={link.id}>
+                <a
+                  href={`#${link.id}`}
+                  onClick={(e) => handleNavClick(e, link.id)}
+                  className={`transition-colors cursor-pointer inline-block ${
+                    activeSection === link.id 
+                      ? 'text-emerald-400 font-bold' 
+                      : 'text-slate-400 hover:text-emerald-400'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 

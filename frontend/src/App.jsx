@@ -297,7 +297,12 @@ export default function App() {
       >
         <div className="portfolio-page">
           {renderPublicView()}
-          <Footer profile={profile} />
+          <Footer
+            profile={profile}
+            activeSection={activeSection}
+            setActiveSection={setActiveSection}
+            setCurrentView={navigateToView}
+          />
         </div>
       </SidebarLayout>
     ) : (
@@ -325,7 +330,12 @@ export default function App() {
             setMessages={setMessages}
             setProfile={setProfile}
           />
-          <Footer profile={profile} />
+          <Footer
+            profile={profile}
+            activeSection={activeSection}
+            setActiveSection={setActiveSection}
+            setCurrentView={navigateToView}
+          />
         </div>
       </SidebarLayout>
     )
